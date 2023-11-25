@@ -12,7 +12,7 @@ namespace RentACar.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=RECEP;initial Catalog=RentACarDb;integrated Security=true;");
+            optionsBuilder.UseSqlServer("Server=RECEP;initial Catalog=RentACarDb;integrated Security=true;TrustServerCertificate=true;");
         }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Banner> Banners { get; set; }
