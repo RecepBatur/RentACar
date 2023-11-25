@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\RentACar.Application\RentACar.Application.csproj" />
     <ProjectReference Include="..\..\Core\RentACar.Domain\RentACar.Domain.csproj" />
   </ItemGroup>
 
