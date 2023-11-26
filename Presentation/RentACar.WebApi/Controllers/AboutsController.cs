@@ -40,7 +40,7 @@ namespace RentACar.WebApi.Controllers
         public async Task<IActionResult> CreateAbout(CreateAboutCommand createAboutCommand)
         {
             await _createAboutCommandHandler.Handle(createAboutCommand);
-            return Ok("Hakkında Bilgisi Eklendi");
+            return Ok("Hakkımda Bilgisi Eklendi");
         }
         [HttpDelete]
         public async Task<IActionResult> RemoveAbout(int id)
