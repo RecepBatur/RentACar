@@ -1,5 +1,6 @@
 using RentACar.Application.Features.CQRS.Handlers.AboutHandlers;
 using RentACar.Application.Features.CQRS.Handlers.BannerHandlers;
+using RentACar.Application.Features.CQRS.Handlers.BrandHandlers;
 using RentACar.Application.Interfaces;
 using RentACar.Persistence.Context;
 using RentACar.Persistence.Repositories;
@@ -21,6 +22,12 @@ builder.Services.AddScoped<GetBannerByIdQueryHandler>();
 builder.Services.AddScoped<CreateBannerCommandHandler>();
 builder.Services.AddScoped<UpdateBannerCommandHandler>();
 builder.Services.AddScoped<RemoveBannerCommandHandler>();
+
+builder.Services.AddScoped<GetBrandQueryHandler>();
+builder.Services.AddScoped<GetBrandByIdQueryHandler>();
+builder.Services.AddScoped<CreateBrandCommandHandler>();
+builder.Services.AddScoped<UpdateBrandCommandHandler>();
+builder.Services.AddScoped<RemoveBrandCommandHandler>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
