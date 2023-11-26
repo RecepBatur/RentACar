@@ -1,4 +1,5 @@
-﻿using RentACar.Application.Features.CQRS.Results.BannerResults;
+﻿using RentACar.Application.Features.CQRS.Queries.BannerQueries;
+using RentACar.Application.Features.CQRS.Results.BannerResults;
 using RentACar.Application.Interfaces;
 using RentACar.Domain.Entities;
 using System;
@@ -17,9 +18,9 @@ namespace RentACar.Application.Features.CQRS.Handlers.BannerHandlers
         {
             _repository = repository;
         }
-        public async Task<GetBannerByIdQueryResult> Handle(GetBannerByIdQueryResult getBannerByIdQueryResult)
+        public async Task<GetBannerByIdQueryResult> Handle(GetBannerByIdQuery getBannerByIdQuery)
         {
-            var values = await _repository.GetByIdAsync(getBannerByIdQueryResult.BannerId);
+            var values = await _repository.GetByIdAsync(getBannerByIdQuery.Id);
             return new GetBannerByIdQueryResult
             {
                 BannerId = values.BannerId,
