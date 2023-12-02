@@ -25,6 +25,7 @@ namespace RentACar.Application.Features.Mediator.Handlers.TestimonialHandlers
             values.Comment = request.Comment;
             values.Title = request.Title;
             values.ImageUrl = request.ImageUrl;
+            values.Name = request.Name;
             await _repository.UpdateAsync(values);
         }
     }
