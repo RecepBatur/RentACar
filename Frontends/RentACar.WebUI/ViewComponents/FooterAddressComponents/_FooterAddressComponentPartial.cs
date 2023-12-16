@@ -13,7 +13,7 @@ namespace RentACar.WebUI.ViewComponents.FooterAddressComponents
         {
             _httpClientFactory = httpClientFactory;
         }
-        public async Task<IViewComponentResult> Invoke()
+        public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient(); // istekte bulunabilmek için bir istemci oluşturdum.
             var responseMessage = await client.GetAsync("https://localhost:7286/api/FooterAddreses");
