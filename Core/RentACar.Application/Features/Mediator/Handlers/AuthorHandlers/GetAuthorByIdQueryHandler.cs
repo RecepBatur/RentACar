@@ -25,7 +25,10 @@ namespace RentACar.Application.Features.Mediator.Handlers.AuthorHandlers
             var value = await _repository.GetByIdAsync(request.Id);
             return new GetAuthorByIdQueryResult
             {
-                AuthorName = value.AuthorName
+                AuthorId = value.AuthorId,
+                AuthorName = value.AuthorName,
+                Description = value.Description,
+                ImageUrl = value.ImageUrl,
             };
         }
     }
