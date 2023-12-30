@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace RentACar.Application.Features.Mediator.Handlers.BlogHandlers
 {
-    public class CreateBlogCommandHandler : IRequest<CreateBlogCommand>
+    public class CreateBlogCommandHandler : IRequestHandler<CreateBlogCommand>
     {
         private readonly IRepository<Blog> _repository;
 

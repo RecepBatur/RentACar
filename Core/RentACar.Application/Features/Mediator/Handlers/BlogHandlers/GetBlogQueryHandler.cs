@@ -1,7 +1,5 @@
 ﻿using MediatR;
 using RentACar.Application.Features.Mediator.Queries.BlogQueries;
-using RentACar.Application.Features.Mediator.Queries.BlogQueries;
-using RentACar.Application.Features.Mediator.Results.BlogResults;
 using RentACar.Application.Features.Mediator.Results.BlogResults;
 using RentACar.Application.Interfaces;
 using RentACar.Domain.Entities;
