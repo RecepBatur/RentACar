@@ -46,5 +46,11 @@ namespace RentACar.WebApi.Controllers
             await _mediator.Send(updateBlogCommand);
             return Ok("Blog Başarılı Bir Şekilde Güncellendi");
         }
+        [HttpGet("GetLastThreeBlogsWithAuthorsList")]
+        public async Task<IActionResult> GetLastThreeBlogsWithAuthorsList()
+        {
+            var values = await _mediator.Send(new GetLastThreeBlogsWithAuthorsQuery());
+            return Ok(values);
+        }
     }
 }
