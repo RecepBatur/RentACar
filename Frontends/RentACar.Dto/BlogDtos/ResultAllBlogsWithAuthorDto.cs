@@ -1,13 +1,12 @@
-﻿using RentACar.Domain.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RentACar.Application.Features.Mediator.Results.BlogResults
+namespace RentACar.Dto.BlogDtos
 {
-    public class GetAllBlogsWithAuthorQueryResult
+    public class ResultAllBlogsWithAuthorDto
     {
         public int BlogId { get; set; }
         public string Title { get; set; }
