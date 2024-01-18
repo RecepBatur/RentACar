@@ -36,7 +36,8 @@ namespace RentACar.Persistence.Repositories.CommentRepositories
 
         public void Remove(Comment entity)
         {
-            _context.Remove(entity);
+            var value = _context.Comments.Find(entity.CommentId);
+            _context.Remove(value);
             _context.SaveChanges();
         }
 
