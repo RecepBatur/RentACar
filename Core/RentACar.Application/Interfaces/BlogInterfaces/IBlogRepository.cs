@@ -11,5 +11,6 @@ namespace RentACar.Application.Interfaces.BlogInterfaces
     {
         public List<Blog> GetLastThreeBlogsWithAuthors();
         public List<Blog> GetAllBlogsWithAuthors();
+        public List<Blog> GetBlogsByAuthorId(int id);
     }
 }

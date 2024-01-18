@@ -4,6 +4,7 @@ using RentACar.Domain.Entities;
 using RentACar.Persistence.Context;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,12 @@ namespace RentACar.Persistence.Repositories.BlogRepositories
         public List<Blog> GetAllBlogsWithAuthors()
         {
             var values = _context.Blogs.Include(x => x.Author).ToList();
+            return values;
+        }
+
+        public List<Blog> GetBlogsByAuthorId(int id)
+        {
+            var values = _context.Blogs.Include(x => x.Author).Where(y => y.BlogId == id).ToList();
             return values;
         }
 

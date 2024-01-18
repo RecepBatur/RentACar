@@ -2,6 +2,7 @@
 using RentACar.Application.Features.Mediator.Queries.BlogQueries;
 using RentACar.Application.Features.Mediator.Results.BlogResults;
 using RentACar.Application.Interfaces.BlogInterfaces;
+using RentACar.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,9 @@ namespace RentACar.Application.Features.Mediator.Handlers.BlogHandlers
                 CoverImageUrl = x.CoverImageUrl,
                 CreatedDate = x.CreatedDate,
                 Title = x.Title,
-                Description = x.Description
+                Description = x.Description,
+                AuthorDescription = x.Author.Description,
+                AuthorImageUrl = x.Author.ImageUrl
             }).ToList();
         }
     }
