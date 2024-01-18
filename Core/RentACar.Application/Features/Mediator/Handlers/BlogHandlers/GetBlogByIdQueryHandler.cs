@@ -30,7 +30,8 @@ namespace RentACar.Application.Features.Mediator.Handlers.BlogHandlers
                 CoverImageUrl = value.CoverImageUrl,
                 CreatedDate = value.CreatedDate,
                 AuthorId = value.AuthorId,
-                CategoryId = value.CategoryId
+                CategoryId = value.CategoryId,
+                Description = value.Description
             };
         }
     }
