@@ -20,13 +20,21 @@ namespace RentACar.Persistence.Repositories.CommentRepositories
 
         public void Create(Comment entity)
         {
+            
             _context.Comments.Add(entity);
             _context.SaveChanges();
         }
 
         public List<Comment> GetAll()
         {
-            return _context.Comments.ToList();
+            return _context.Comments.Select(x => new Comment
+            {
+                CommentId = x.CommentId,
+                Name = x.Name,
+                BlogId = x.BlogId,
+                CreatedDate = x.CreatedDate,
+                Description = x.Description
+            }).ToList();
         }
 
         public Comment GetById(int id)
