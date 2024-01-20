@@ -16,5 +16,17 @@ namespace RentACar.WebUI.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult AdminSidebarPartial()
+        {
+            return PartialView();
+        }
+        public PartialViewResult AdminFooterbarPartial()
+        {
+            return PartialView();
+        }
+        public PartialViewResult AdminScriptbarPartial()
+        {
+            return PartialView();
+        }
     }
 }
