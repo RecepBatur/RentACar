@@ -68,5 +68,30 @@ namespace RentACar.WebUI.Controllers
             }
             return View();
         }
+        [HttpGet]
+        public async Task<IActionResult> UpdateCar(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessageFirst = await client.GetAsync("https://localhost:7286/api/Brands");
+            var jsonDataFirst = await responseMessageFirst.Content.ReadAsStringAsync();
+            var valuesFirst = JsonConvert.DeserializeObject<List<ResultBrandDto>>(jsonDataFirst);
+            //Dropdown List
+            List<SelectListItem> brandValues = (from x in valuesFirst
+                                                select new SelectListItem
+                                                {
+                                                    Text = x.Name,
+                                                    Value = x.BrandId.ToString()
+                                                }).ToList();
+            ViewBag.BrandValues = brandValues;
+
+            var responseMessage = await client.GetAsync($"https://localhost:7286/api/Cars/{id}");
+            if(responseMessage.IsSuccessStatusCode)
+            {
+                var jesonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<UpdateCarDto>(jesonData);
+                return View(values);
+            }
+            return View();
+        }
     }
 }
