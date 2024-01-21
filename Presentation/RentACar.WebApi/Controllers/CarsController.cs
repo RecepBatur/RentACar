@@ -58,7 +58,7 @@ namespace RentACar.WebApi.Controllers
             await _createCarCommandHandler.Handle(createCarCommand);
             return Ok("Araba Bilgisi Başarılı Bir Şekilde Eklendi");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveCar(int id)
         {
             await _removeCarCommandHandler.Handle(new RemoveCarCommand(id));
