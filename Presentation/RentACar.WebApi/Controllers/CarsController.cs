@@ -65,7 +65,7 @@ namespace RentACar.WebApi.Controllers
             return Ok("Araba Bilgisi Başarılı Bir Şekilde Silindi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateCommand(UpdateCarCommand updateCarCommand)
+        public async Task<IActionResult> UpdateCar(UpdateCarCommand updateCarCommand)
         {
             await _updateCarCommandHandler.Handle(updateCarCommand);
             return Ok("Araba Bilgisi Başarılı Bir Şekilde Güncellendi");
