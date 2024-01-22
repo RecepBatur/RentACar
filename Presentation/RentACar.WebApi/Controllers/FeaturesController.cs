@@ -33,7 +33,7 @@ namespace RentACar.WebApi.Controllers
             await _mediator.Send(createFeatureCommand);
             return Ok("Özellik Başarılı Bir Şekilde Eklendi");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveFeature(int id)
         {
             await _mediator.Send(new RemoveFeatureCommand(id));

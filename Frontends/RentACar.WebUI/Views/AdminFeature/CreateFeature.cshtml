@@ -1,0 +1,26 @@
+﻿@model CreateFeatureDto
+@{
+    ViewData["Title"] = "CreateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Yeni Araç Özelliği Girişi</h4>
+                    <p class="card-subtitle mb-4">Araç ile ilgili özellikleri aşağıdaki kutucuklara eksiksiz doldurmanız önemlidir. Veri girişlerinden sonra kaydetmeyi unutmayınız.</p>
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="exampleInputModel">Özellik</label>
+                            <input type="text" class="form-control" id="exampleInputName" placeholder="Özellik Adı Girişi Yapınız" asp-for="Name">
+                        </div>
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
