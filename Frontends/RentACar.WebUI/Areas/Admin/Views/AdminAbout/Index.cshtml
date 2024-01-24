@@ -1,0 +1,52 @@
+﻿@model List<ResultAboutDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Hakkımda Sayfası</h4>
+                    <p class="card-subtitle mb-4">
+                        Ana sayfanın ve hakkımızda sayfasının hakkımnda alanında bulunan bilgileri aşağıdan düzenleyebilirsiniz. Tema bütünlüğü bozulmaması adına lütfen sadece bir tane veri girişi yapınız. Aksi durumlarda tema bütünlüğü bozulacaktır.
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Başlık</th>
+                                    <th>Açıklama</th>
+                                    <th>Resim Url</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <th scope="row">@count</th>
+                                        <td>@item.title</td>
+                                        <td>@item.description</td>
+                                        <td>@item.imageUrl</td>
+                                        <td><a href="/Admin/AdminAbout/RemoveAbout/@item.aboutId" class="btn btn-outline-danger">Sil</a></td>
+                                        <td><a href="/Admin/AdminAbout/UpdateAbout/@item.aboutId" class="btn btn-outline-success">Güncelle</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <br />
+                        <td><a href="/Admin/AdminAbout/CreateAbout/" class="btn btn-outline-primary">Yeni Bilgi Ekle</a></td>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
