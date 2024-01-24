@@ -30,4 +30,9 @@
     <ProjectReference Include="..\RentACar.Dto\RentACar.Dto.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+
 </Project>
