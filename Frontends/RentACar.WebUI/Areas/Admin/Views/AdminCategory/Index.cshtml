@@ -1,0 +1,50 @@
+﻿@model List<ResultCategoryDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Kategoriler</h4>
+                    <p class="card-subtitle mb-4">
+                        Bloglara ait kategorileri bilgileri aşağıdan düzenleyebilirsiniz. Tema bütünlüğü bozulmaması adına lütfen sadece bir tane veri girişi yapınız. Aksi durumlarda tema bütünlüğü bozulacaktır.
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Başlık</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+                                    <th>Kategoriye Ait Bloglar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <th scope="row">@count</th>
+                                        <td>@item.CategoryName</td>
+                                        <td><a href="/Admin/AdminCategory/RemoveCategory/@item.CategoryId" class="btn btn-outline-danger">Sil</a></td>
+                                        <td><a href="/Admin/AdminCategory/UpdateCategory/@item.CategoryId" class="btn btn-outline-success">Güncelle</a></td>
+                                        <td><a href="/Admin/AdminCategory/UpdateCategory/@item.CategoryId" class="btn btn-outline-dark">Kategoriye ait Bloglar</a></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <br />
+                        <td><a href="/Admin/AdminCategory/CreateCategory/" class="btn btn-outline-primary">Yeni Kategori Ekle</a></td>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
