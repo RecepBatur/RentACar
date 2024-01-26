@@ -23,8 +23,7 @@
                                     <th>Yazar</th>
                                     <th>Kategori</th>
                                     <th>Tarih</th>
-                                    <th>Sil</th>
-                                    <th>Güncelle</th>
+                                    <th>Kaldır</th>
                                     <th>Blog Aç</th>
                                     <th>Yorumlar</th>
                                 </tr>
@@ -39,10 +38,9 @@
                                         <td>@item.AuthorName</td>
                                         <td>@item.CategoryId</td>
                                         <td>@item.CreatedDate</td>
-                                        <td><a href="/Admin/AdminBlog/RemoveBlog/@item.BlogId" class="btn btn-outline-danger">Sil</a></td>
-                                        <td><a href="/Admin/AdminBlog/UpdateBlog/@item.BlogId" class="btn btn-outline-success">Güncelle</a></td>
-                                        <td><a href="/Admin/AdminBlog/UpdateBlog/@item.BlogId" class="btn btn-outline-dark">Blog Aç</a></td>
-                                        <td><a href="/Admin/AdminBlog/UpdateBlog/@item.BlogId" class="btn btn-outline-primary">Yorumlar</a></td>
+                                        <td><a href="/Admin/AdminBlog/RemoveBlog/@item.BlogId" class="btn btn-outline-danger">Kaldır</a></td>
+                                        <td><a href="/Blog/BlogDetail/@item.BlogId" class="btn btn-outline-dark">Blog Aç</a></td>
+                                        <td><a href="/Admin/AdminBlog/BlogListByBlogId/@item.BlogId" class="btn btn-outline-primary">Yorumlar</a></td>
                                     </tr>
                                 }
                             </tbody>
