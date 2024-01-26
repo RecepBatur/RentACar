@@ -20,7 +20,7 @@ namespace RentACar.Persistence.Repositories.CommentRepositories
 
         public void Create(Comment entity)
         {
-            
+
             _context.Comments.Add(entity);
             _context.SaveChanges();
         }
@@ -40,6 +40,11 @@ namespace RentACar.Persistence.Repositories.CommentRepositories
         public Comment GetById(int id)
         {
             return _context.Comments.Find(id);
+        }
+
+        public List<Comment> GetCommentByBlogId(int id)
+        {
+            return _context.Set<Comment>().Where(x => x.BlogId == id).ToList();
         }
 
         public void Remove(Comment entity)
