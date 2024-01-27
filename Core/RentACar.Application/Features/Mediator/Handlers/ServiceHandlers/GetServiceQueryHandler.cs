@@ -27,7 +27,8 @@ namespace RentACar.Application.Features.Mediator.Handlers.ServiceHandlers
             {
                 Description = x.Description,
                 IconUrl = x.IconUrl,
-                Title = x.Title
+                Title = x.Title,
+                ServiceId = x.ServiceId
             }).ToList();
         }
     }

@@ -26,6 +26,7 @@ namespace RentACar.Application.Features.Mediator.Handlers.PricingHandlers
             return new GetPricingByIdQueryResult
             {
                 Name = value.Name,
+                PricingId = value.PricingId
             };
         }
     }

@@ -28,6 +28,7 @@ namespace RentACar.Application.Features.Mediator.Handlers.ServiceHandlers
                 Description = value.Description,
                 IconUrl = value.IconUrl,
                 Title = value.Title,
+                ServiceId = value.ServiceId
             };
         }
     }
