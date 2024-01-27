@@ -1,0 +1,38 @@
+﻿@model CreateFooterAddressDto
+@{
+    ViewData["Title"] = "CreateFooterAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Adres Veri Girişi Alanı</h4>
+                    <p class="card-subtitle mb-4">Adres ile ilgili özellikleri aşağıdaki kutucuklara eksiksiz doldurmanız önemlidir. Veri girişlerinden sonra kaydetmeyi unutmayınız.</p>
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="exampleInputModel">Adres</label>
+                            <input type="text" class="form-control" id="exampleInputAuthorName" placeholder="Adres Bilgisini Giriniz" asp-for="Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputModel">Açıklama</label>
+                            <textarea rows="5" class="form-control" id="exampleInputDescription" placeholder="Yazar Açıklama Girişi Yapınız" asp-for="Description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputModel">Telefon Numarası</label>
+                            <input type="tel" class="form-control" id="exampleInputImageUrl" placeholder="Telefon Numarasını Giriniz" asp-for="Phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputModel">Email</label>
+                            <input type="email" class="form-control" id="exampleInputAuthorName" placeholder="Mail Bilgisini Giriniz" asp-for="Email">
+                        </div>
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
