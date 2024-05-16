@@ -1,0 +1,34 @@
+﻿@model RentACar.Dto.SocialMediaDtos.CreateSocialMediaDto
+@{
+    ViewData["Title"] = "CreateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Sosyal Medya Veri Girişi Alanı</h4>
+                    <p class="card-subtitle mb-4">Hesaplar ile ilgili özellikleri aşağıdaki kutucuklara eksiksiz doldurmanız önemlidir. Veri girişlerinden sonra kaydetmeyi unutmayınız.</p>
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="exampleInputModel">Hesap Adı</label>
+                            <input type="text" class="form-control" id="exampleInputTitle" placeholder="Hesap Adını Giriniz" asp-for="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputModel">Url</label>
+                            <input type="text" class="form-control" id="exampleInputUrl" placeholder="Url Bilgisi Giriniz" asp-for="Url">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputModel">İkon</label>
+                            <input type="text" class="form-control" id="exampleInputIconUrl" placeholder="İkon Bilgisi Giriniz" asp-for="Icon">
+                        </div>
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
