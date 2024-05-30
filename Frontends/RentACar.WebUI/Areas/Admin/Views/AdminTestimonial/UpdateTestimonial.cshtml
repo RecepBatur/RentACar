@@ -1,0 +1,39 @@
+﻿@model UpdateTestimonialDto
+@{
+    ViewData["Title"] = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Yeni Referans Veri Girişi Alanı</h4>
+                    <p class="card-subtitle mb-4">Referanslar ile ilgili bilgileri aşağıdaki kutucuklara eksiksiz doldurmanız önemlidir. Veri girişlerinden sonra kaydetmeyi unutmayınız.</p>
+                    <form method="post">
+                        <input type="hidden" asp-for="TestimonialId" />
+                        <div class="form-group">
+                            <label for="exampleInputModel">Referans Adı</label>
+                            <input type="text" class="form-control" id="exampleInputTitle" placeholder="Referans Adını Giriniz" asp-for="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputModel">Başlık</label>
+                            <input type="text" class="form-control" id="exampleInputUrl" placeholder="Başlık Bilgisi Giriniz" asp-for="Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputImageUrl">Görsel</label>
+                            <input type="text" class="form-control" id="exampleInputImageUrl" placeholder="Görsel Seçiniz" asp-for="ImageUrl">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputImageUrl">Yorum</label>
+                            <textarea rows="5" asp-for="Comment" class="form-control" placeholder="Yorum Bilgisini Giriniz"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
